@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  hr_management.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "8080"
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: Admin123
+      ACCEPT_EULA: Y
+    ports:
+      - "1433:1433"

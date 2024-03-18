@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hr_management.api:
+    image: ${DOCKER_REGISTRY-}hrmanagementapi
+    build:
+      context: .
+      dockerfile: API/HR_Management.Api/Dockerfile
